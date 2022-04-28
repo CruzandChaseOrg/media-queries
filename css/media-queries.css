@@ -15,10 +15,6 @@ body {
     font-style: italic;
 }
 
-.header-img > img {
-    width: calc(100vw - 16px);
-}
-
 @media screen and (max-width: 960px) {
     .hidden-on-desktop {
         display: flex;
@@ -47,7 +43,7 @@ body {
         margin-left: -40px;
     }
 
-    .header-img {
-
+    .header-img > img {
+        width: calc(100vw - 16px);
     }
 }
