@@ -2,9 +2,6 @@
     box-sizing: border-box;
 }
 
-body {
-}
-
 .hidden-on-desktop {
     display: none;
 }
@@ -17,10 +14,18 @@ body {
     width: calc(100vw - 16px);
 }
 
-@media screen and (min-width: 960px) {
+@media screen and (min-width: 700px) {
     body {
         display: flex;
         flex-direction: column;
+    }
+
+    /* had to modify html and put section into a div flex container*/
+    div:nth-of-type(3){
+        display: flex;
+        flex-direction: row;
+        justify-self: baseline;
+        justify-content: space-between;
     }
 
     ul {
@@ -35,14 +40,18 @@ body {
         margin-top: -50px;
     }
 
-    section {
-        display: flex;
-        flex-direction: row;
-        margin: 10px 0;
+    .main {
+        display: inline-block;
+        width: 55%
+    }
+
+    .sub-section {
+        display: inline-block;
+        width: 40%;
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 700px) {
     a {
         text-decoration: none;
     }
